@@ -2,6 +2,8 @@
 
 from sys import exit
 
+supply_contents = []
+
 def starting_point():
     """
     starts the entire game
@@ -52,7 +54,7 @@ def unicorn():
     reached from starting_point()
     results in hippogriff()
     """
-    print "Description"
+    print "\nDescription"
     print "Do you read the sign?"
     selection = raw_input("Y/N ")
     if selection == "supplies":
@@ -71,7 +73,7 @@ def hippogriff():
     reached from unicorn()
     results in death() or minotaur()
     """
-    print "Description"
+    print "\nDescription"
     answer = raw_input("Do you demand passage to the door or ask politely? ")
     if answer == "supplies":
         supply_list()
@@ -82,24 +84,56 @@ def hippogriff():
         minotaur()
     elif "demand" in answer:
         death("Hippogriff")
+    else:
+        death("You die some other way")
 
 def minotaur():
     """
     reached from hippogriff()
     results in death() or manticore()/centaur()
     """
+    print "\nDescription"
+    answer = raw_input("Do you walk or run across the top of the labyrinth walls? ")
+    if "run" in answer:
+        death("Fall in and get gored by minotaur.")
+    elif "walk" in answer:
+        print "reach other side safely."
+        print "You find a bow and quiver of arrows."
+        selection = raw_input("Do you take them, Y/N? ")
+        if selection == "y" or selection == "Y":
+            supply_storage("Bow and Quiver")
+        elif selection == "n" or selection == "N":
+            return
+        else:
+            death("Minotaur leaps over wall and kills you.")
+        print "Door to the left and door to the right."
+        choice = raw_input("Which door do you go through? ")
+        if "right" or "Right" in choice:
+            centaur()
+        elif "left" or "Left" in choice:
+            manticore()
+        else:
+            death("Minotaur leaps over wall and kills you.")
+    else:
+        death("Some other way.")
+        
 
 def manticore():
     """
     reached from minotaur()
     results in death()
     """
+    print "Hey look, a manticore"
+    death("You get devoured whole. No evidence of your body or possessions remain.")
 
 def centaur():
     """
     reached from minotaur()
     results in sphinx()
     """
+    print "\nDescription"
+    supply_storage("Bundle of herbs")
+    sphinx()
 
 def sphinx():
     """
