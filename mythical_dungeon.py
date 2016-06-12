@@ -1,6 +1,6 @@
 # http://learnpythonthehardway.org/book/ex36.html
 
-from sys import exit
+import sys
 
 supply_contents = []
 
@@ -10,13 +10,18 @@ def starting_point():
     describes the scenario, rules, and goal
     results in unicorn()
     """
-    # empty list that will be the player's pack
-    supply_contents = []
-    print "Description of the scenario"
-    print "Here are the rules:"
-    print "Here is the goal"
+    print "\nYou find yourself in a clearing. To obtain safe"
+    print "passage, you must navigate from this clearing to"
+    print "a room full of treasure. Between the clearing and"
+    print "the treasure is a dungeon of dangerous creatures."
+    print "You must use your wits and knowledge of mythical"
+    print "beasts to safely navigate through the dungeon.\n"
+    print "The creatures may assist you on your journey by"
+    print "providing supplies and knowledge. But beware! An"
+    print "incorrect turning or action will bring your death.\n"
+    print "At any prompt, type 'supplies' to see the list"
+    print "of your current supplies.\n"
     unicorn()
-    
 
 def death(reason):
     """
@@ -29,11 +34,11 @@ def death(reason):
     if selection == "y" or selection == "Y":
         starting_point()
     else:
-        exit(0)
+        sys.exit(0)
 
 def supply_storage(item):
     """
-    adds dropped items to the player's pack
+    adds dropped/found items to the player's pack
     """
     supply_contents.append(item)
     return supply_contents
@@ -42,7 +47,7 @@ def supply_list():
     """
     displays the contents of the player's pack
     """
-    if len(supply_contents) < 0:
+    if len(supply_contents) < 1:
         print "You currently do not have any supplies."
     else:
         print "You have these supplies:"
@@ -54,9 +59,16 @@ def unicorn():
     reached from starting_point()
     results in hippogriff()
     """
-    print "\nDescription"
-    print "Do you read the sign?"
-    selection = raw_input("Y/N ")
+    print "You walk north into the trees surrounding the"
+    print "clearing. After you can no longer see the clearing,"
+    print "you catch a glimpse of white from behind a large"
+    print "tree. You step forward cautiously to find a unicorn.\n"
+    print "At the sound of your breathing, the unicorn runs"
+    print "into the woods, revealing a small sign. The sign"
+    print "stands between you and a door in a large tree.\n"
+    print "Do you read the sign, Y/N"
+# if you type supplies, supply_list prints, then the else: happens
+    selection = raw_input(">> ")
     if selection == "supplies":
         supply_list()
     if selection == "y" or selection == "Y":
@@ -66,7 +78,7 @@ def unicorn():
         print "something pithy"
         hippogriff()
     else:
-        death("You wander around the grove until you waste away and die.")
+        death("You wander around the woods until you waste away and die.")
 
 def hippogriff():
     """
@@ -116,7 +128,6 @@ def minotaur():
             death("Minotaur leaps over wall and kills you.")
     else:
         death("Some other way.")
-        
 
 def manticore():
     """
