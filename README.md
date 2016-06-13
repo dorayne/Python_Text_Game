@@ -9,9 +9,11 @@ The goal is to survive a series of mythological creatures and reach the treasure
 - <s>Figure out how I want to solve the Sphinx's riddle</s>
 - Finish stubbing out the remaining functions
 - Actually writing out the print statements
+- case insensitive user input
 
 ###Future additions
 - Printing the supply list only when user requests it, not at every room
 - Expand riddles to include multiple options instead of just the one riddle
 - Can the creature order be made random?
+- error checking for user input in a way that does not just use `else: death()`
 
