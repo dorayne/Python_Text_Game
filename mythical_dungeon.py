@@ -172,10 +172,7 @@ def chimera():
     print "description"
     print "how do i want to word your choices here?"
     choice = raw_input(">> ")
-    if "bow" or "hippogriff" in choice:
-        print "something about it not enough to kill a chimera"
-        death("you died")
-    elif "bow" and "hippogriff" in choice:
+    if "bow" and "hippogriff" in choice:
         print "something about killing a chimera"
         supply_storage("lyre")
         print "pick a door"
