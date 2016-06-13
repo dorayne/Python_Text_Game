@@ -6,7 +6,7 @@ The goal is to survive a series of mythological creatures and reach the treasure
 
 ###To-Do List
 
-- Figure out how I want to solve the Sphinx's riddle
+- <s>Figure out how I want to solve the Sphinx's riddle</s>
 - Finish stubbing out the remaining functions
 - Actually writing out the print statements
 
