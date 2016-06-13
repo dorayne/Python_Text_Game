@@ -19,8 +19,6 @@ def starting_point():
     print "The creatures may assist you on your journey by"
     print "providing supplies and knowledge. But beware! An"
     print "incorrect turning or action will bring your death.\n"
-    print "At any prompt, type 'supplies' to see the list"
-    print "of your current supplies.\n"
     unicorn()
 
 def death(reason):
@@ -38,14 +36,14 @@ def death(reason):
 
 def supply_storage(item):
     """
-    adds dropped/found items to the player's pack
+    adds dropped/found items to the player's supplies
     """
     supply_contents.append(item)
     return supply_contents
 
 def supply_list():
     """
-    displays the contents of the player's pack
+    displays the contents of the player's supplies
     """
     if len(supply_contents) < 1:
         print "You currently do not have any supplies."
@@ -53,6 +51,7 @@ def supply_list():
         print "You have these supplies:"
         for item in supply_contents:
             print item
+    print
 
 def unicorn():
     """
@@ -67,10 +66,7 @@ def unicorn():
     print "into the woods, revealing a small sign. The sign"
     print "stands between you and a door in a large tree.\n"
     print "Do you read the sign, Y/N"
-# if you type supplies, supply_list prints, then the else: happens
     selection = raw_input(">> ")
-    if selection == "supplies":
-        supply_list()
     if selection == "y" or selection == "Y":
         print "The sign says:"
         hippogriff()
@@ -85,8 +81,10 @@ def hippogriff():
     reached from unicorn()
     results in death() or minotaur()
     """
-    print "\nDescription"
-    answer = raw_input("Do you demand passage to the door or ask politely? ")
+    supply_list()
+    print "Description"
+    print "Do you demand passage to the door or ask politely?"
+    answer = raw_input(">> ")
     if answer == "supplies":
         supply_list()
     if "politely" in answer:
@@ -104,8 +102,10 @@ def minotaur():
     reached from hippogriff()
     results in death() or manticore()/centaur()
     """
-    print "\nDescription"
-    answer = raw_input("Do you walk or run across the top of the labyrinth walls? ")
+    supply_list()
+    print "Description"
+    print "Do you walk or run across the top of the labyrinth walls?"
+    answer = raw_input(">> ")
     if "run" in answer:
         death("Fall in and get gored by minotaur.")
     elif "walk" in answer:
@@ -134,6 +134,7 @@ def manticore():
     reached from minotaur()
     results in death()
     """
+    supply_list()
     print "Hey look, a manticore"
     death("You get devoured whole. No evidence of your body or possessions remain.")
 
@@ -142,6 +143,7 @@ def centaur():
     reached from minotaur()
     results in sphinx()
     """
+    supply_list()
     print "\nDescription"
     supply_storage("Bundle of herbs")
     sphinx()
@@ -151,6 +153,13 @@ def sphinx():
     reached from centaur
     results in death() or chimera()
     """
+    supply_list()
+    print "What has 4 legs at breakfast, 2 legs at lunch, and 3 legs at dinner?"
+    answer = raw_input(">> ")
+    if answer == "man" or answer == "Man":
+        return True
+    else:
+        return False
 
 def chimera():
     """
