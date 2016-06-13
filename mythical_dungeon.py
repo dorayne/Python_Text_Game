@@ -157,15 +157,20 @@ def sphinx():
     print "What has 4 legs at breakfast, 2 legs at lunch, and 3 legs at dinner?"
     answer = raw_input(">> ")
     if answer == "man" or answer == "Man":
-        return True
+        print "some message about besting the sphinx"
+        supply_storage("earmuffs")
+        chimera()
     else:
-        return False
+        death("how should the sphinx kill you?")
 
 def chimera():
     """
     reached from sphinx()
     results in death() or medusa()/circe()
     """
+    supply_list()
+    print "description"
+    print ""
 
 def medusa():
     """
