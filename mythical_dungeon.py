@@ -191,6 +191,7 @@ def medusa():
     reached from chimera()
     results in death() or harpies()
     """
+    supply_list()
     print "Vague description"
     print "Do you proceed to get a better look or close your eyes and hope for the best?"
     choice = raw_input(">> ")
