@@ -191,6 +191,14 @@ def medusa():
     reached from chimera()
     results in death() or harpies()
     """
+    print "Vague description"
+    print "Do you proceed to get a better look or close your eyes and hope for the best?"
+    choice = raw_input(">> ")
+    if "close" in choice:
+        print "Medusa confirmation"
+        harpies()
+    else:
+        death("Turned to stone.")
 
 def circe():
     """
