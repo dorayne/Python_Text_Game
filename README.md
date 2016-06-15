@@ -9,7 +9,8 @@ The goal is to survive a series of mythological creatures and reach the treasure
 - <s>Figure out how I want to solve the Sphinx's riddle</s>
 - Finish stubbing out the remaining functions
 - Actually writing out the print statements
-- case insensitive user input
+- Case insensitive user input
+- Get user input to recognize only a single letter entry when appropriate
 
 ###Future additions
 - Printing the supply list only when user requests it, not at every room
