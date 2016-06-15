@@ -206,6 +206,15 @@ def circe():
     reached from chimera()
     results in death() or harpies()
     """
+    supply_list()
+    print "description"
+    print "Do you have anything in your pack for Circe?"
+    if "Bundle of herbs" in supply_contents:
+        print "Something about circe not turning you into a pig"
+        supply_storage("Food")
+        harpies()
+    else:
+        death("Turned into a pig")
 
 def harpies():
     """
