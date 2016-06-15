@@ -11,6 +11,7 @@ The goal is to survive a series of mythological creatures and reach the treasure
 - Actually writing out the print statements
 - Case insensitive user input
 - Get user input to recognize only a single letter entry when appropriate
+- `supply_contents` needs to reset to an empty list if the user continues inside `death()`
 
 ###Future additions
 - Printing the supply list only when user requests it, not at every room
