@@ -211,6 +211,7 @@ def circe():
     print "Do you have anything in your pack for Circe?"
     if "Bundle of herbs" in supply_contents:
         print "Something about circe not turning you into a pig"
+        supply_contents.remove("Bundle of herbs")
         supply_storage("Food")
         harpies()
     else:
@@ -224,6 +225,8 @@ def harpies():
     supply_list()
     if "Food" in supply_contents:
         print "Harpies steal your food and fly away"
+        supply_contents.remove("Food")
+        phoenix()
     else:
         death("The harpies peck out your eyes cause you didn't have any food for them.")
 
@@ -232,6 +235,11 @@ def phoenix():
     reached from harpies()
     results in pegasus()
     """
+    supply_list()
+    print "Description"
+    print "Something something flame sword"
+    supply_storage("Flaming sword")
+    pegasus()
 
 def pegasus():
     """
