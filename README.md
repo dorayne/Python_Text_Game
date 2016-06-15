@@ -16,4 +16,4 @@ The goal is to survive a series of mythological creatures and reach the treasure
 - Expand riddles to include multiple options instead of just the one riddle
 - Can the creature order be made random?
 - Error checking for user input in a way that does not just use `else: death()`
-- Should items be removed from the list `supply_contents` after they have been used?
+- <s>Should items be removed from the list `supply_contents` after they have been used?</s> I totally figured out what I wanted to do here right after adding this bullet
