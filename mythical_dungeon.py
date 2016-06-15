@@ -221,6 +221,11 @@ def harpies():
     reached from medusa() or circe()
     results in death() or phoenix()
     """
+    supply_list()
+    if "Food" in supply_contents:
+        print "Harpies steal your food and fly away"
+    else:
+        death("The harpies peck out your eyes cause you didn't have any food for them.")
 
 def phoenix():
     """
