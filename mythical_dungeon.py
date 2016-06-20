@@ -2,7 +2,7 @@
 
 import sys
 
-supply_contents = []
+SUPPLY_CONTENTS = []
 
 def starting_point():
     """
@@ -38,18 +38,18 @@ def supply_storage(item):
     """
     adds dropped/found items to the player's supplies
     """
-    supply_contents.append(item)
-    return supply_contents
+    SUPPLY_CONTENTS.append(item)
+    return SUPPLY_CONTENTS
 
 def supply_list():
     """
     displays the contents of the player's supplies
     """
-    if len(supply_contents) < 1:
+    if len(SUPPLY_CONTENTS) < 1:
         print "You currently do not have any supplies."
     else:
         print "You have these supplies:"
-        for item in supply_contents:
+        for item in SUPPLY_CONTENTS:
             print item
     print
 
@@ -209,9 +209,9 @@ def circe():
     supply_list()
     print "description"
     print "Do you have anything in your pack for Circe?"
-    if "Bundle of herbs" in supply_contents:
+    if "Bundle of herbs" in SUPPLY_CONTENTS:
         print "Something about circe not turning you into a pig"
-        supply_contents.remove("Bundle of herbs")
+        SUPPLY_CONTENTS.remove("Bundle of herbs")
         supply_storage("Food")
         harpies()
     else:
@@ -223,9 +223,9 @@ def harpies():
     results in death() or phoenix()
     """
     supply_list()
-    if "Food" in supply_contents:
+    if "Food" in SUPPLY_CONTENTS:
         print "Harpies steal your food and fly away"
-        supply_contents.remove("Food")
+        SUPPLY_CONTENTS.remove("Food")
         phoenix()
     else:
         death("The harpies peck out your eyes cause you didn't have any food for them.")
