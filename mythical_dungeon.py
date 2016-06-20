@@ -246,6 +246,16 @@ def pegasus():
     reached from phoenix()
     results in cerberus()
     """
+    supply_list()
+    print "Description"
+    print "Do you need advice? Y/N"
+    choice = raw_input(">> ")
+    if choice == "y" or choice == "Y":
+        print "Here is some advice:"
+        cerberus()
+    else:
+        print "You think you're so smart!"
+        cerberus()
 
 def cerberus():
     """
