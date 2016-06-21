@@ -301,12 +301,12 @@ def boat():
         hydra()
     elif "left" in choice:
         print "Steer to the left"
-        print "You have to choose Scylla or Charibdis"
+        print "You have to choose Scylla or Charybdis"
         selection = raw_input(">> ")
         if "Scylla" in selection:
             scylla()
-        elif "Charibdis" in selection:
-            charibdis()
+        elif "Charybdis" in selection:
+            charybdis()
         else:
             death("You dead.")
     else:
@@ -317,18 +317,39 @@ def hydra():
     reached from sirens() via boat()
     results in death() or griffin()
     """
+    supply_list()
+    print "Description"
+    print "You must have some supplies that will help you get past the Hydra"
+    selection = raw_input(">> ")
+    if "Flaming sword" in selection:
+        print "You cut off a head and the flames cauterize the neck wound, preventing more heads from growing."
+        griffin()
+    else:
+        death("The heads eat you and your poor, blameless hippogriff.")
 
 def scylla():
     """
     reached from sirens() via boat()
     results in death() or griffin()
     """
+    supply_list()
+    print "Description"
+    if "hippogriff" in SUPPLY_CONTENTS:
+        print "At the sight of Scylla, your faithful hippogriff flies out of the boat in fear."
+        print "Your companion's flight distracts all of the heads who pluck him easily out of the sky, allowing you to pass"
+        SUPPLY_CONTENTS.remove("hippogriff")
+        griffin()
+    else:
+        death("Scylla eats you and is still hungry.")
 
 def charybdis():
     """
     reached from sirens() via boat()
     only results in death()
     """
+    supply_list()
+    print "There is no escaping Charybdis."
+    death("Your boat cannot break free of the whirlpool and you drown.")
 
 def griffin():
     """
