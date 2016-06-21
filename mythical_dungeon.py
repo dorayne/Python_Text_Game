@@ -292,6 +292,25 @@ def boat():
     reached from sirens()
     results in death() or hydra()/scylla()/charybdis()
     """
+    supply_list()
+    print "You're in a boat following the current."
+    print "the river splits. Do you choose the right or left fork?"
+    choice = raw_input(">> ")
+    if "right" in choice:
+        print "Steer to the right"
+        hydra()
+    elif "left" in choice:
+        print "Steer to the left"
+        print "You have to choose Scylla or Charibdis"
+        selection = raw_input(">> ")
+        if "Scylla" in selection:
+            scylla()
+        elif "Charibdis" in selection:
+            charibdis()
+        else:
+            death("You dead.")
+    else:
+        death("You spend so much time not making a decision that your boat is dashed on the rocks.")
 
 def hydra():
     """
