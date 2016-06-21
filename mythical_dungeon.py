@@ -10,6 +10,9 @@ def starting_point():
     describes the scenario, rules, and goal
     results in unicorn()
     """
+    print "*********************************************************"
+    print "             WELCOME TO THE MYTHICAL DUNGEON             "
+    print "*********************************************************\n"
     print "\nYou find yourself in a clearing. To obtain safe"
     print "passage, you must navigate from this clearing to"
     print "a room full of treasure. Between the clearing and"
@@ -58,6 +61,9 @@ def unicorn():
     reached from starting_point()
     results in hippogriff()
     """
+    print "*********************************************************"
+    print "                 ENTERING UNICORN GROVE                  "
+    print "*********************************************************\n"
     print "You walk north into the trees surrounding the"
     print "clearing. After you can no longer see the clearing,"
     print "you catch a glimpse of white from behind a large"
@@ -81,6 +87,9 @@ def hippogriff():
     reached from unicorn()
     results in death() or minotaur()
     """
+    print "*********************************************************"
+    print "                     HIPPOGRIFF ENTRY                    "
+    print "*********************************************************\n"
     supply_list()
     print "Description"
     print "Do you demand passage to the door or ask politely?"
@@ -102,6 +111,9 @@ def minotaur():
     reached from hippogriff()
     results in death() or manticore()/centaur()
     """
+    print "*********************************************************"
+    print "                    MINOTAUR'S MAZE                      "
+    print "*********************************************************\n"
     supply_list()
     print "Description"
     print "Do you walk or run across the top of the labyrinth walls?"
@@ -134,6 +146,9 @@ def manticore():
     reached from minotaur()
     results in death()
     """
+    print "*********************************************************"
+    print "                      MANTICORE ROOM                     "
+    print "*********************************************************\n"
     supply_list()
     print "Hey look, a manticore"
     death("You get devoured whole. No evidence of your body or possessions remain.")
@@ -153,6 +168,9 @@ def sphinx():
     reached from centaur
     results in death() or chimera()
     """
+    print "*********************************************************"
+    print "                        SPHINX ROOM                      "
+    print "*********************************************************\n"
     supply_list()
     print "What has 4 legs at breakfast, 2 legs at lunch, and 3 legs at dinner?"
     answer = raw_input(">> ")
@@ -168,6 +186,9 @@ def chimera():
     reached from sphinx()
     results in death() or medusa()/circe()
     """
+    print "*********************************************************"
+    print "                       CHIMERA ROOM                      "
+    print "*********************************************************\n"
     supply_list()
     print "description"
     print "how do i want to word your choices here?"
@@ -191,6 +212,9 @@ def medusa():
     reached from chimera()
     results in death() or harpies()
     """
+    print "*********************************************************"
+    print "                        MEDUSA ROOM                      "
+    print "*********************************************************\n"
     supply_list()
     print "Vague description"
     print "Do you proceed to get a better look or close your eyes and hope for the best?"
@@ -206,6 +230,9 @@ def circe():
     reached from chimera()
     results in death() or harpies()
     """
+    print "*********************************************************"
+    print "                        CIRCE ROOM                       "
+    print "*********************************************************\n"
     supply_list()
     print "description"
     print "Do you have anything in your pack for Circe?"
@@ -222,6 +249,9 @@ def harpies():
     reached from medusa() or circe()
     results in death() or phoenix()
     """
+    print "*********************************************************"
+    print "                     ROOM OF HARPIES                     "
+    print "*********************************************************\n"
     supply_list()
     if "Food" in SUPPLY_CONTENTS:
         print "Harpies steal your food and fly away"
@@ -235,6 +265,9 @@ def phoenix():
     reached from harpies()
     results in pegasus()
     """
+    print "*********************************************************"
+    print "                       PHOENIX ROOM                      "
+    print "*********************************************************\n"
     supply_list()
     print "Description"
     print "Something something flame sword"
@@ -246,6 +279,9 @@ def pegasus():
     reached from phoenix()
     results in cerberus()
     """
+    print "*********************************************************"
+    print "                       PEGASUS ROOM                      "
+    print "*********************************************************\n"
     supply_list()
     print "Description"
     print "Do you need advice? Y/N"
@@ -262,6 +298,9 @@ def cerberus():
     reached from pegasus()
     results in death() or sirens()
     """
+    print "*********************************************************"
+    print "                       CERBERUS ROOM                     "
+    print "*********************************************************\n"
     supply_list()
     print "Description"
     print "Which of your supplies would you like to use to get past Cerberus?"
@@ -277,6 +316,9 @@ def sirens():
     reached from cerberus()
     results in death() or boat()
     """
+    print "*********************************************************"
+    print "                      MANTICORE ROOM                     "
+    print "*********************************************************\n"
     print "Description"
     print "Something something earmuffs"
     selection = raw_input(">> ")
@@ -292,6 +334,9 @@ def boat():
     reached from sirens()
     results in death() or hydra()/scylla()/charybdis()
     """
+    print "*********************************************************"
+    print "                     TAKE TO THE SEAS                    "
+    print "*********************************************************\n"
     supply_list()
     print "You're in a boat following the current."
     print "the river splits. Do you choose the right or left fork?"
@@ -317,6 +362,9 @@ def hydra():
     reached from sirens() via boat()
     results in death() or griffin()
     """
+    print "*********************************************************"
+    print "                        HYDRA AREA                       "
+    print "*********************************************************\n"
     supply_list()
     print "Description"
     print "You must have some supplies that will help you get past the Hydra"
@@ -332,6 +380,9 @@ def scylla():
     reached from sirens() via boat()
     results in death() or griffin()
     """
+    print "*********************************************************"
+    print "                       SCYLLA AREA                       "
+    print "*********************************************************\n"
     supply_list()
     print "Description"
     if "hippogriff" in SUPPLY_CONTENTS:
@@ -347,6 +398,9 @@ def charybdis():
     reached from sirens() via boat()
     only results in death()
     """
+    print "*********************************************************"
+    print "                      CHARYBDIS AREA                     "
+    print "*********************************************************\n"
     supply_list()
     print "There is no escaping Charybdis."
     death("Your boat cannot break free of the whirlpool and you drown.")
@@ -356,6 +410,9 @@ def griffin():
     reached from hydra and scylla
     results in death() or treasure()
     """
+    print "*********************************************************"
+    print "                       GRIFFIN ROOM                      "
+    print "*********************************************************\n"
     supply_list()
     print "Description"
     print "The griffin stands between you and the door clearly marked Treasure."
@@ -372,6 +429,9 @@ def treasure():
     can only be reached from griffin()
     this is the winning room
     """
+    print "*********************************************************"
+    print "                      TREASURE ROOM                      "
+    print "*********************************************************\n"
     print "You get all this treasure. You win!"
     print "Do you want to play again?"
     selection = raw_input("Y/N ")
