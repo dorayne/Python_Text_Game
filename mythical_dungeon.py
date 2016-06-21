@@ -356,11 +356,28 @@ def griffin():
     reached from hydra and scylla
     results in death() or treasure()
     """
+    supply_list()
+    print "Description"
+    print "The griffin stands between you and the door clearly marked Treasure."
+    print "The griffin demands a password"
+    password = raw_input(">> ")
+    if "please" in password:
+        print "The griffin steps aside, allowing you to get to the treasure."
+        treasure()
+    else:
+        death("You died")
 
 def treasure():
     """
     can only be reached from griffin()
     this is the winning room
     """
+    print "You get all this treasure. You win!"
+    print "Do you want to play again?"
+    selection = raw_input("Y/N ")
+    if selection == "y" or selection == "Y":
+        starting_point()
+    else:
+        sys.exit(0)
 
 starting_point()
