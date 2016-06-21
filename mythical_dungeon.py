@@ -277,6 +277,15 @@ def sirens():
     reached from cerberus()
     results in death() or boat()
     """
+    print "Description"
+    print "Something something earmuffs"
+    selection = raw_input(">> ")
+    if "earmuffs" in selection:
+        print "You get the earmuffs on before you hear the sirens sing."
+        print "You walk casually past the sirens and hop into the boat conveniently tied to the shore."
+        boat()
+    else:
+        death("The siren song lures you to your death.")
 
 def boat():
     """
