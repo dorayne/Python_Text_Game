@@ -262,6 +262,15 @@ def cerberus():
     reached from pegasus()
     results in death() or sirens()
     """
+    supply_list()
+    print "Description"
+    print "Which of your supplies would you like to use to get past Cerberus?"
+    selection = raw_input(">> ")
+    if "lyre" in selection:
+        print "The lyre lulls cerberus asleep and you tiptoe past"
+        sirens()
+    else:
+        death("All the dog heads eat you!")
 
 def sirens():
     """
