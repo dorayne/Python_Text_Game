@@ -7,7 +7,7 @@ The goal is to survive a series of mythological creatures and reach the treasure
 ###To-Do List
 
 - <s>Figure out how I want to solve the Sphinx's riddle</s>
-- Finish stubbing out the remaining functions
+- <s>Finish stubbing out the remaining functions</s>
 - Actually writing out the print statements
 - Case insensitive user input
 - Get user input to recognize only a single letter entry when appropriate
