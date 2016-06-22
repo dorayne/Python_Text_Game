@@ -24,6 +24,13 @@ def starting_point():
     print "incorrect turning or action will bring your death.\n"
     unicorn()
 
+def reset():
+    count = len(SUPPLY_CONTENTS)
+    while count > 0:
+        SUPPLY_CONTENTS.pop(0)
+        count = count - 1
+    return SUPPLY_CONTENTS
+
 def death(reason):
     """
     describes how the player dies
@@ -33,6 +40,7 @@ def death(reason):
     print "Do you want to play again?"
     selection = raw_input("Y/N ")
     if selection == "y" or selection == "Y":
+        reset()
         starting_point()
     else:
         sys.exit(0)
@@ -436,6 +444,7 @@ def treasure():
     print "Do you want to play again?"
     selection = raw_input("Y/N ")
     if selection == "y" or selection == "Y":
+        reset()
         starting_point()
     else:
         sys.exit(0)
