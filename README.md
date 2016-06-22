@@ -9,8 +9,8 @@ The goal is to survive a series of mythological creatures and reach the treasure
 - <s>Figure out how I want to solve the Sphinx's riddle</s>
 - <s>Finish stubbing out the remaining functions</s>
 - Actually writing out the print statements
-- Case insensitive user input
-- Get user input to recognize only a single letter entry when appropriate
+- <s>Case insensitive user input</s>
+- <s>Get user input to recognize only a single letter entry when appropriate</s> Decided against doing this so the user can change their mind before they hit enter.
 - <s>`supply_contents` needs to reset to an empty list if the user continues inside `death()`</s>
 
 ###Future additions
