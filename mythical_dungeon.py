@@ -38,8 +38,8 @@ def death(reason):
     """
     print reason, "Great job!"
     print "Do you want to play again?"
-    selection = raw_input("Y/N ")
-    if selection == "y" or selection == "Y":
+    selection = raw_input("Y/N ").lower()
+    if selection == "y":
         reset()
         starting_point()
     else:
@@ -80,11 +80,11 @@ def unicorn():
     print "into the woods, revealing a small sign. The sign"
     print "stands between you and a door in a large tree.\n"
     print "Do you read the sign, Y/N"
-    selection = raw_input(">> ")
-    if selection == "y" or selection == "Y":
+    selection = raw_input(">> ").lower()
+    if selection == "y":
         print "The sign says:"
         hippogriff()
-    elif selection == "n" or selection == "N":
+    elif selection == "n":
         print "something pithy"
         hippogriff()
     else:
@@ -101,9 +101,7 @@ def hippogriff():
     supply_list()
     print "Description"
     print "Do you demand passage to the door or ask politely?"
-    answer = raw_input(">> ")
-    if answer == "supplies":
-        supply_list()
+    answer = raw_input(">> ").lower()
     if "politely" in answer:
         print "The hippogriff moves aside, allowing you to walk through the door."
         print "The hippogriff is now your companion through this dungeon."
@@ -125,24 +123,24 @@ def minotaur():
     supply_list()
     print "Description"
     print "Do you walk or run across the top of the labyrinth walls?"
-    answer = raw_input(">> ")
+    answer = raw_input(">> ").lower()
     if "run" in answer:
         death("Fall in and get gored by minotaur.")
     elif "walk" in answer:
         print "reach other side safely."
         print "You find a bow and quiver of arrows."
-        selection = raw_input("Do you take them, Y/N? ")
-        if selection == "y" or selection == "Y":
+        selection = raw_input("Do you take them, Y/N? ").lower()
+        if selection == "y":
             supply_storage("Bow and Quiver")
-        elif selection == "n" or selection == "N":
+        elif selection == "n":
             return
         else:
             death("Minotaur leaps over wall and kills you.")
         print "Door to the left and door to the right."
-        choice = raw_input("Which door do you go through? ")
-        if "right" or "Right" in choice:
+        choice = raw_input("Which door do you go through? ").lower()
+        if "right" in choice:
             centaur()
-        elif "left" or "Left" in choice:
+        elif "left" in choice:
             manticore()
         else:
             death("Minotaur leaps over wall and kills you.")
@@ -181,8 +179,8 @@ def sphinx():
     print "*********************************************************\n"
     supply_list()
     print "What has 4 legs at breakfast, 2 legs at lunch, and 3 legs at dinner?"
-    answer = raw_input(">> ")
-    if answer == "man" or answer == "Man":
+    answer = raw_input(">> ").lower()
+    if answer == "man":
         print "some message about besting the sphinx"
         supply_storage("earmuffs")
         chimera()
@@ -200,12 +198,12 @@ def chimera():
     supply_list()
     print "description"
     print "how do i want to word your choices here?"
-    choice = raw_input(">> ")
+    choice = raw_input(">> ").lower()
     if "bow" and "hippogriff" in choice:
         print "something about killing a chimera"
         supply_storage("lyre")
         print "pick a door"
-        selection = raw_input(">> ")
+        selection = raw_input(">> ").lower()
         if selection == "left":
             medusa()
         elif selection == "right":
@@ -226,7 +224,7 @@ def medusa():
     supply_list()
     print "Vague description"
     print "Do you proceed to get a better look or close your eyes and hope for the best?"
-    choice = raw_input(">> ")
+    choice = raw_input(">> ").lower()
     if "close" in choice:
         print "Medusa confirmation"
         harpies()
@@ -293,8 +291,8 @@ def pegasus():
     supply_list()
     print "Description"
     print "Do you need advice? Y/N"
-    choice = raw_input(">> ")
-    if choice == "y" or choice == "Y":
+    choice = raw_input(">> ").lower()
+    if choice == "y":
         print "Here is some advice:"
         cerberus()
     else:
@@ -312,7 +310,7 @@ def cerberus():
     supply_list()
     print "Description"
     print "Which of your supplies would you like to use to get past Cerberus?"
-    selection = raw_input(">> ")
+    selection = raw_input(">> ").lower()
     if "lyre" in selection:
         print "The lyre lulls cerberus asleep and you tiptoe past"
         sirens()
@@ -329,7 +327,7 @@ def sirens():
     print "*********************************************************\n"
     print "Description"
     print "Something something earmuffs"
-    selection = raw_input(">> ")
+    selection = raw_input(">> ").lower()
     if "earmuffs" in selection:
         print "You get the earmuffs on before you hear the sirens sing."
         print "You walk casually past the sirens and hop into the boat conveniently tied to the shore."
@@ -348,14 +346,14 @@ def boat():
     supply_list()
     print "You're in a boat following the current."
     print "the river splits. Do you choose the right or left fork?"
-    choice = raw_input(">> ")
+    choice = raw_input(">> ").lower()
     if "right" in choice:
         print "Steer to the right"
         hydra()
     elif "left" in choice:
         print "Steer to the left"
         print "You have to choose Scylla or Charybdis"
-        selection = raw_input(">> ")
+        selection = raw_input(">> ").lower()
         if "Scylla" in selection:
             scylla()
         elif "Charybdis" in selection:
@@ -376,7 +374,7 @@ def hydra():
     supply_list()
     print "Description"
     print "You must have some supplies that will help you get past the Hydra"
-    selection = raw_input(">> ")
+    selection = raw_input(">> ").lower()
     if "Flaming sword" in selection:
         print "You cut off a head and the flames cauterize the neck wound, preventing more heads from growing."
         griffin()
@@ -425,7 +423,7 @@ def griffin():
     print "Description"
     print "The griffin stands between you and the door clearly marked Treasure."
     print "The griffin demands a password"
-    password = raw_input(">> ")
+    password = raw_input(">> ").lower()
     if "please" in password:
         print "The griffin steps aside, allowing you to get to the treasure."
         treasure()
@@ -442,8 +440,8 @@ def treasure():
     print "*********************************************************\n"
     print "You get all this treasure. You win!"
     print "Do you want to play again?"
-    selection = raw_input("Y/N ")
-    if selection == "y" or selection == "Y":
+    selection = raw_input("Y/N ").lower()
+    if selection == "y":
         reset()
         starting_point()
     else:
