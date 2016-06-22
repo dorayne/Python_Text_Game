@@ -10,18 +10,22 @@ def starting_point():
     describes the scenario, rules, and goal
     results in unicorn()
     """
+    print
     print "*********************************************************"
     print "             WELCOME TO THE MYTHICAL DUNGEON             "
-    print "*********************************************************\n"
-    print "\nYou find yourself in a clearing. To obtain safe"
+    print "*********************************************************"
+    print
+    print "You find yourself in a clearing. To obtain safe"
     print "passage, you must navigate from this clearing to"
     print "a room full of treasure. Between the clearing and"
     print "the treasure is a dungeon of dangerous creatures."
     print "You must use your wits and knowledge of mythical"
-    print "beasts to safely navigate through the dungeon.\n"
+    print "beasts to safely navigate through the dungeon."
+    print
     print "The creatures may assist you on your journey by"
     print "providing supplies and knowledge. But beware! An"
-    print "incorrect turning or action will bring your death.\n"
+    print "incorrect turning or action will bring your death."
+    print
     unicorn()
 
 def reset():
@@ -69,23 +73,35 @@ def unicorn():
     reached from starting_point()
     results in hippogriff()
     """
+    print
     print "*********************************************************"
     print "                 ENTERING UNICORN GROVE                  "
-    print "*********************************************************\n"
+    print "*********************************************************"
+    print
     print "You walk north into the trees surrounding the"
     print "clearing. After you can no longer see the clearing,"
     print "you catch a glimpse of white from behind a large"
-    print "tree. You step forward cautiously to find a unicorn.\n"
+    print "tree. You step forward cautiously to find a unicorn."
+    print
     print "At the sound of your breathing, the unicorn runs"
     print "into the woods, revealing a small sign. The sign"
-    print "stands between you and a door in a large tree.\n"
+    print "stands between you and a door in a large tree."
+    print
     print "Do you read the sign, Y/N"
     selection = raw_input(">> ").lower()
     if selection == "y":
-        print "The sign says:"
+        print
+        print "You approach the sign to find faded writing."
+        print
+        print "'Good manners are their own reward'"
+        print
+        print "If all you need are good manners, the treasure"
+        print "is sure to be easy to get."
+        print
+        print "You walk around the sign and through the door."
         hippogriff()
     elif selection == "n":
-        print "something pithy"
+        print "Obviously, you're not a reader."
         hippogriff()
     else:
         death("You wander around the woods until you waste away and die.")
