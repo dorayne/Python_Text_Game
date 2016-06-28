@@ -146,35 +146,57 @@ def minotaur():
     reached from hippogriff()
     results in death() or manticore()/centaur()
     """
+    print
+    print "You and your hippogriff without a name walk through"
+    print "the door to find yourself on a narrow stone ledge."
+    print "Looking around the room, you see that the floor is"
+    print "made up of many ledges in a labyrinthine pattern."
+    print
+    print "The room is large and you can make out what looks"
+    print "to be two doors in the wall across from you. You"
+    print "hear the bellow of a bull and something that sounds"
+    print "like human feet in dirt, not hoof beats."
+    print
     print "*********************************************************"
     print "                    MINOTAUR'S MAZE                      "
-    print "*********************************************************\n"
+    print "*********************************************************"
+    print
     supply_list()
-    print "Description"
-    print "Do you walk or run across the top of the labyrinth walls?"
+    print "It appears that the ledges will allow you to cross"
+    print "to the other side of the room. Do you walk or run"
+    print "across the top of the labyrinth walls?"
     answer = raw_input(">> ").lower()
     if "run" in answer:
-        death("Fall in and get gored by minotaur.")
+        death("In your haste, you trip and fall off the wall. The minotaur gores and then eats you.")
     elif "walk" in answer:
-        print "reach other side safely."
-        print "You find a bow and quiver of arrows."
+        print "As you cross, you hear but never see the minotaur."
+        print "Some of the walls appear to be in poor repair,"
+        print "with pieces falling into the maze as you walk"
+        print "past. It is slow going, but you safely reach"
+        print "The other side where you find a bow and quiver"
+        print "of arrows between two doors."
         selection = raw_input("Do you take them, Y/N? ").lower()
         if selection == "y":
             supply_storage("Bow and Quiver")
         elif selection == "n":
             return
         else:
-            death("Minotaur leaps over wall and kills you.")
-        print "Door to the left and door to the right."
-        choice = raw_input("Which door do you go through? ").lower()
+            death("As you stand there looking at the bow and quiver, the Minotaur leaps over wall and kills you.")
+        print "There is a door to the left and a door to the"
+        print "right. Which door do you go through?"
+        choice = raw_input(">> ").lower()
         if "right" in choice:
+            print "You and your hippogriff move to the right and"
+            print "walk through the door."
             centaur()
         elif "left" in choice:
+            print "You and your hippogriff move to the left and"
+            print "walk through the door."
             manticore()
         else:
-            death("Minotaur leaps over wall and kills you.")
+            death("You took too long to make a decision, so the Minotaur leaps over wall and kills you.")
     else:
-        death("Some other way.")
+        death("Out of nowhere, your hippogriff headbutts you into the labyrinth. The Minotaur eats you.")
 
 def manticore():
     """
