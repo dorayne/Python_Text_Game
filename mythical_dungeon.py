@@ -102,6 +102,7 @@ def unicorn():
         hippogriff()
     elif selection == "n":
         print "Obviously, you're not a reader."
+        print "You ignore the sign and walk through the door."
         hippogriff()
     else:
         death("You wander around the woods until you waste away and die.")
@@ -111,22 +112,34 @@ def hippogriff():
     reached from unicorn()
     results in death() or minotaur()
     """
+    print
+    print "On the other side of the door, you find yourself"
+    print "in a medium-sized room with soft grass below your"
+    print "feet. The ceiling is high enough to almost feel"
+    print "like you are still outdoors, except for the clearly"
+    print "visible walls."
+    print
+    print "There is another door directly across from the one"
+    print "you just came through. As you step closer to the"
+    print "exit, a hippogriff lands between you and the door."
+    print
     print "*********************************************************"
     print "                     HIPPOGRIFF ENTRY                    "
-    print "*********************************************************\n"
+    print "*********************************************************"
+    print
     supply_list()
-    print "Description"
     print "Do you demand passage to the door or ask politely?"
     answer = raw_input(">> ").lower()
     if "politely" in answer:
-        print "The hippogriff moves aside, allowing you to walk through the door."
-        print "The hippogriff is now your companion through this dungeon."
+        print "The hippogriff moves aside, allowing you to walk"
+        print "through the door. It follows you through the door"
+        print "and is now your companion through this dungeon."
         supply_storage("hippogriff")
         minotaur()
     elif "demand" in answer:
-        death("Hippogriff")
+        death("The hippogriff does not like your tone and kills you.")
     else:
-        death("You die some other way")
+        death("You sit down in front of the hippogriff, never to rise again.")
 
 def minotaur():
     """
