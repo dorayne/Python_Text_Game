@@ -74,14 +74,14 @@ def unicorn():
     results in hippogriff()
     """
     print
-    print "*********************************************************"
-    print "                 ENTERING UNICORN GROVE                  "
-    print "*********************************************************"
-    print
     print "You walk north into the trees surrounding the"
     print "clearing. After you can no longer see the clearing,"
     print "you catch a glimpse of white from behind a large"
     print "tree. You step forward cautiously to find a unicorn."
+    print
+    print "*********************************************************"
+    print "                 ENTERING UNICORN GROVE                  "
+    print "*********************************************************"
     print
     print "At the sound of your breathing, the unicorn runs"
     print "into the woods, revealing a small sign. The sign"
