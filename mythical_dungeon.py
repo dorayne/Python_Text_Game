@@ -15,16 +15,13 @@ def starting_point():
     print "             WELCOME TO THE MYTHICAL DUNGEON             "
     print "*********************************************************"
     print
-    print "You find yourself in a clearing. To obtain safe"
-    print "passage, you must navigate from this clearing to"
-    print "a room full of treasure. Between the clearing and"
-    print "the treasure is a dungeon of dangerous creatures."
-    print "You must use your wits and knowledge of mythical"
-    print "beasts to safely navigate through the dungeon."
+    print "You find yourself in a clearing. To obtain safe passage, you must navigate"
+    print "from this clearing to a room full of treasure. Between the clearing and the"
+    print "treasure is a dungeon of dangerous creatures. You must use your wits and"
+    print "knowledge of mythical beasts to safely navigate through the dungeon."
     print
-    print "The creatures may assist you on your journey by"
-    print "providing supplies and knowledge. But beware! An"
-    print "incorrect turning or action will bring your death."
+    print "The creatures may assist you on your journey by providing supplies and"
+    print "knowledge. But beware! An incorrect turning or action will bring your death."
     unicorn()
 
 def reset():
@@ -77,18 +74,16 @@ def unicorn():
     results in hippogriff()
     """
     print
-    print "You walk north into the trees surrounding the"
-    print "clearing. After you can no longer see the clearing,"
-    print "you catch a glimpse of white from behind a large"
+    print "You walk north into the trees surrounding the clearing. After you can no"
+    print "longer see the clearing, you catch a glimpse of white from behind a large"
     print "tree. You step forward cautiously to find a unicorn."
     print
     print "*********************************************************"
     print "                 ENTERING UNICORN GROVE                  "
     print "*********************************************************"
     print
-    print "At the sound of your breathing, the unicorn runs"
-    print "into the woods, revealing a small sign. The sign"
-    print "stands between you and a door in a large tree."
+    print "At the sound of your breathing, the unicorn runs into the woods, revealing a"
+    print "small sign. The sign stands between you and a door in a large tree."
     print
     print "Do you read the sign, Y/N"
     selection = raw_input(">> ").lower()
@@ -98,8 +93,7 @@ def unicorn():
         print
         print "'Good manners are their own reward'"
         print
-        print "If all you need are good manners, the treasure"
-        print "is sure to be easy to get."
+        print "If all you need are good manners, the treasure is sure to be easy to get."
         print
         print "You walk around the sign and through the door."
         hippogriff()
@@ -116,15 +110,12 @@ def hippogriff():
     results in death() or minotaur()
     """
     print
-    print "On the other side of the door, you find yourself"
-    print "in a medium-sized room with soft grass below your"
-    print "feet. The ceiling is high enough to almost feel"
-    print "like you are still outdoors, except for the clearly"
-    print "visible walls."
+    print "On the other side of the door, you find yourself in a medium-sized room with"
+    print "soft grass below your feet. The ceiling is high enough to almost feel like you"
+    print "are still outdoors, except for the clearly visible walls."
     print
-    print "There is another door directly across from the one"
-    print "you just came through. As you step closer to the"
-    print "exit, a hippogriff lands between you and the door."
+    print "There is another door directly across from the one you just came through. As"
+    print "As you step closer to the exit, a hippogriff lands between you and the door."
     print
     print "*********************************************************"
     print "                     HIPPOGRIFF ENTRY                    "
@@ -135,13 +126,12 @@ def hippogriff():
     answer = raw_input(">> ").lower()
     if "politely" in answer:
         print
-        print "The hippogriff moves aside, allowing you to walk"
-        print "through the door. It follows you through the door"
-        print "and is now your companion through this dungeon."
+        print "The hippogriff moves aside, allowing you to walk through the door. It"
+        print "follows you through the door and is now your companion through this dungeon."
         supply_storage("Hippogriff")
         minotaur()
     elif "demand" in answer:
-        death("The hippogriff does not like your tone and kills you.")
+        death("The hippogriff does not appreciate your tone and kills you.")
     else:
         death("You sit down in front of the hippogriff, never to rise again.")
 
@@ -151,49 +141,40 @@ def minotaur():
     results in death() or manticore()/centaur()
     """
     print
-    print "You and your hippogriff without a name walk through"
-    print "the door to find yourself on a narrow stone ledge."
-    print "Looking around the room, you see that the floor is"
+    print "You and your hippogriff without a name walk through the door to find yourself"
+    print "on a narrow stone ledge. Looking around the room, you see that the floor is"
     print "made up of many ledges in a labyrinthine pattern."
     print
-    print "The room is large and you can make out what looks"
-    print "to be two doors in the wall across from you. You"
-    print "hear the bellow of a bull and something that sounds"
-    print "like human feet in dirt, not hoof beats."
+    print "The room is large and you can make out what looks to be two doors in the wall"
+    print "across from you. You hear the bellow of a bull and something that sounds like"
+    print "human feet moving across dusty ground, not hoof beats."
     print
     print "*********************************************************"
     print "                    MINOTAUR'S MAZE                      "
     print "*********************************************************"
     print
     supply_list()
-    print "It appears that the ledges will allow you to cross"
-    print "to the other side of the room. Do you walk or run"
-    print "across the top of the labyrinth walls?"
+    print "It appears that the ledges will allow you to cross to the other side of the"
+    print "room. Do you walk or run across the top of the labyrinth walls?"
     answer = raw_input(">> ").lower()
     if "run" in answer:
-        print
-        print "In your haste, you trip and fall off the wall."
-        death("The minotaur gores and then eats you.")
+        death("You trip and fall off the wall. The minotaur gores and then eats you.")
     elif "walk" in answer:
         print
-        print "As you cross, you hear but never see the minotaur."
-        print "Some of the walls appear to be in poor repair,"
-        print "with pieces falling into the maze as you walk"
-        print "past. It is slow going, but you safely reach"
-        print "The other side where you find a bow and quiver"
-        print "of arrows between two doors. Do you take them, Y/N?"
+        print "As you cross, you hear but never see the minotaur. Some of the walls appear to"
+        print "be in poor repair, with pieces falling into the maze as you walk past. It is"
+        print "slow going, but you safely reach the other side where you find a bow and a quiver"
+        print "of arrows between two doors. Do you take the bow and quiver, Y/N?"
         selection = raw_input(">> ").lower()
         if selection == "y":
             supply_storage("Bow and Quiver")
+            print "You have added 'Bow and Quiver' to your list of supplies."
         elif selection == "n":
             return
         else:
-            print
-            print "As you stand there looking at the bow and quiver,"
-            death("the Minotaur leaps over wall and kills you.")
+            death("The Minotaur leaps over wall and kills you while you were making a decision.")
         print
-        print "There is a door to the left and a door to the"
-        print "right. Which door do you go through?"
+        print "There is a door to the left and a door to the right. Which door do you go through?"
         choice = raw_input(">> ").lower()
         if "right" in choice:
             print
@@ -204,23 +185,22 @@ def minotaur():
             print "You and your hippogriff move to the left and walk through the door."
             manticore()
         else:
-            print "You took too long to make a decision"
-            death("so the Minotaur leaps over wall and kills you.")
+            death("You are so bad at deciding that the Minotaur leaps over wall and kills you.")
     else:
-        print "Out of nowhere, your hippogriff headbutts you"
-        print "into the labyrinth."
-        death("The Minotaur eats you.")
+        death("Your hippogriff headbutts you into the labyrinth where the Minotaur eats you.")
 
 def manticore():
     """
     reached from minotaur()
     results in death()
     """
+    print "Hey look, a manticore!"
+    print
     print "*********************************************************"
     print "                      MANTICORE ROOM                     "
-    print "*********************************************************\n"
+    print "*********************************************************"
+    print
     supply_list()
-    print "Hey look, a manticore"
     death("You get devoured whole. No evidence of your body or possessions remain.")
 
 def centaur():
