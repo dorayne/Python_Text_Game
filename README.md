@@ -13,6 +13,7 @@ The goal is to survive a series of mythological creatures and reach the treasure
 - <s>Get user input to recognize only a single letter entry when appropriate</s> Decided against doing this so the user can change their mind before they hit enter.
 - <s>`supply_contents` needs to reset to an empty list if the user continues inside `death()`</s>
 -  Incorporate some sort of pause or interaction between rooms.
+-  Entering "n" at Bow and Quiver inside minotaur() exits the game? This needs to be fixed.
 
 ###Future additions
 - Printing the supply list only when user requests it, not at every room
