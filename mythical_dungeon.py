@@ -15,10 +15,10 @@ def starting_point():
     print "             WELCOME TO THE MYTHICAL DUNGEON             "
     print "*********************************************************"
     print
-    print "You find yourself in a clearing. To obtain safe passage, you must navigate"
-    print "from this clearing to a room full of treasure. Between the clearing and the"
-    print "treasure is a dungeon of dangerous creatures. You must use your wits and"
-    print "knowledge of mythical beasts to safely navigate through the dungeon."
+    print "You find yourself in a clearing with an empty satchel. To obtain safe passage,"
+    print "you must navigate from this clearing to a room full of treasure. Between the"
+    print "clearing and the treasure is a dungeon of dangerous creatures. You must use"
+    print "your wits and knowledge of mythical beasts to safely get through the dungeon."
     print
     print "The creatures may assist you on your journey by providing supplies and"
     print "knowledge. But beware! An incorrect turning or action will bring your death."
@@ -208,9 +208,23 @@ def centaur():
     reached from minotaur()
     results in sphinx()
     """
+    print "You and your hippogriff walk cautiously through the door to find lush grass"
+    print "and many trees. You cannot see through the trees, so you turn to the left and"
+    print "follow the wall. After walking for a few minutes, you realize that the wall is"
+    print "curved and that this is a round room with high walls and no ceiling. You hear"
+    print "hoofbeats and turn to see a centaur approaching you from the trees."
+    print
+    print "*********************************************************"
+    print "                      CENTAUR ROOM                       "
+    print "*********************************************************"
+    print
     supply_list()
-    print "\nDescription"
+    print "The centaur hands you a small bundle of green stems and leaves tied up with"
+    print "string. He stares at you while pawing at the ground until you place the bundle"
+    print "in your satchel."
     supply_storage("Bundle of herbs")
+    print "After the bundle is safely in your satchel, the centaur turns and trots away."
+    print "Rather than follow him, you continue to follow the wall until you find a door."
     sphinx()
 
 def sphinx():
