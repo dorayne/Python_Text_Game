@@ -232,18 +232,25 @@ def sphinx():
     reached from centaur
     results in death() or chimera()
     """
+    print "You follow the hippogriff through the door to find yourself in a bright room."
+    print "After your eyes adjust, you see a four-legged figure with a feminine face. Is"
+    print "that a sphinx?"
+    print
     print "*********************************************************"
     print "                        SPHINX ROOM                      "
-    print "*********************************************************\n"
+    print "*********************************************************"
     supply_list()
-    print "What has 4 legs at breakfast, 2 legs at lunch, and 3 legs at dinner?"
+    print "'You may not pass until you answer my riddle. What has four legs at breakfast,"
+    print "two legs at lunch, and three legs at dinner?'"
     answer = raw_input(">> ").lower()
     if answer == "man":
-        print "some message about besting the sphinx"
-        supply_storage("earmuffs")
+        print "'You answered my riddle correctly. You may proceed. Please take this gift.'"
+        supply_storage("Earmuffs")
+        print "You have added 'Earmuffs' to your supplies."
         chimera()
     else:
-        death("how should the sphinx kill you?")
+        print "The sphinx grins. 'You answered my riddle incorrectly and I am hungry.'"
+        death("The sphinx eats you.")
 
 def chimera():
     """
