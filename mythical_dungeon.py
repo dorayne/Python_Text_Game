@@ -170,7 +170,7 @@ def minotaur():
             supply_storage("Bow and Quiver")
             print "You have added 'Bow and Quiver' to your list of supplies."
         elif selection == "n":
-            return
+            pass
         else:
             death("The Minotaur leaps over wall and kills you while you were making a decision.")
         print
